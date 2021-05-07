@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-07 16:52:53
+ * @LastEditTime: 2021-05-07 17:01:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -30,4 +30,16 @@ imgList = [
 ]
 
 `
+
+### Atributos
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| imgList | 基础图片数据 | Object | {src:"",id:1} 必填项 | - |
+| perspective | 视距 | Number | - | 1000 |
+| randomNum | 随机位置参数 | Number | - | 40 |
+| row | 行 | Number | - | 5 |
+| column | 列 | Number | - | 5 |
+| baseZ | 初始视距 Z轴 | Number | - | -400 |
+| overZ | 消失视距 Z轴 | Number | - | 600 |
+| speed | 速度 | Number | - | 10000 |
 
