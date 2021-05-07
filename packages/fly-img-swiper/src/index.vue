@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 18:19:42
+ * @LastEditTime: 2021-05-07 18:35:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -53,7 +53,7 @@ export default {
     },
     speed: {
       type: Number,
-      default: 10000
+      default: 5000
     }
   },
   data() {
@@ -108,12 +108,9 @@ export default {
           direction: 'alternate',
           easing: 'easeInOutSine',
           opacity: [
-            { value: 1, duration: 100, delay: this.speed, easing: 'easeOutExpo' },
-            { value: 0, duration: 100 }
+            { value: 1, duration: 200, delay: this.speed, easing: 'easeInOutExpo' },
+            { value: 0, duration: 0 }
           ],
-          update: function(anim) {
-            console.log(anim.progress)
-          },
           loopComplete: function(anim) {
             anim.completed && anim.restart()
           }
