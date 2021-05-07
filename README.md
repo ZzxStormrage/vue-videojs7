@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-07 17:01:25
+ * @LastEditTime: 2021-05-07 17:06:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -10,7 +10,7 @@
 
 # Use 
 
-`
+```
 npm i fly-img-swiper --S
 npm i animejs --D
 
@@ -28,8 +28,7 @@ imgList = [
     id: 'img' + i
   }
 ]
-
-`
+```
 
 ### Atributos
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
