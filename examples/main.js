@@ -10,7 +10,7 @@
 import Vue from 'vue'
 import vueConfig from '../vue.config'
 import App from './App.vue'
-import ImgSwiper from '../packages/3d-img-swiper/src/index.vue'
+import ImgSwiper from '../packages/fly-img-swiper/src/index.vue'
 
 Vue.component('img-swiper', ImgSwiper)
 
