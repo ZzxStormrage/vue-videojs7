@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 12:12:33
+ * @LastEditTime: 2021-05-07 16:50:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -85,7 +85,6 @@ export default {
       }
     },
     stop() {
-      console.log(this.pageTimer)
       this.clearTimeout()
     },
     start() {

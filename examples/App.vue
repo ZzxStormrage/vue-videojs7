@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2021-05-07 16:36:31
+ * @LastEditTime: 2021-05-07 16:49:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
@@ -9,7 +9,11 @@
 <template>
   <div id="app">
     <div class="img-swiper-wrap">
-      <fly-img-swiper :img-list="imgList" />
+      <fly-img-swiper ref="flyImgSwiper" :img-list="imgList" />
+    </div>
+    <div>
+      <button @click="start">start</button>
+      <button @click="stop">stop</button>
     </div>
   </div>
 </template>
@@ -29,6 +33,14 @@ export default {
           id: 'img' + i
         }
       )
+    }
+  },
+  methods: {
+    start() {
+      this.$refs.flyImgSwiper.start
+    },
+    stop() {
+      this.$refs.flyImgSwiper.stop()
     }
   }
 }
