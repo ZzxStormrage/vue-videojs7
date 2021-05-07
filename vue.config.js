@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-06 11:17:26
- * @LastEditTime: 2021-05-07 12:09:24
+ * @LastEditTime: 2021-05-07 16:32:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/vue.config.js
@@ -26,6 +26,8 @@ module.exports = {
       .tap(options => {
         return options
       })
+  },
+  css: {
+    extract: false // 绑定css样式
   }
-
 }
