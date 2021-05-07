@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-05-07 12:03:09
- * @LastEditTime: 2021-05-07 12:03:26
+ * @LastEditTime: 2021-05-07 14:06:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.js
  */
 // 导入组件，组件必须声明 name
-import flyImgSwiper from './index.vue'
+import flyImgSwiper from './src/index.vue'
 
 // 为组件提供 install 安装方法，供按需引入
 flyImgSwiper.install = function(Vue) {
