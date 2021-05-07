@@ -1,9 +1,9 @@
 {
   "name": "fly-img-swiper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "zzx",
   "private": false,
-  "main": "liib/hades-ui.umd.min.js",
+  "main": "lib/fly-img-swiper.umd.min.js",
   "descriptiion": "this is a fly-img-swiper",
   "keyword": "fly-img-swiper swiper img",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name fly-img-swiper --dest lib packages/index.js"
   },
-
   "dependencies": {
     "core-js": "^3.6.5",
+    "fly-img-swiper": "^0.1.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {

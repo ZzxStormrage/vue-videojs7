@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2021-05-07 11:32:20
+ * @LastEditTime: 2021-05-07 15:42:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
@@ -9,7 +9,7 @@
 <template>
   <div id="app">
     <div class="img-swiper-wrap">
-      <img-swiper :img-list="imgList" />
+      <fly-img-swiper :img-list="imgList" />
     </div>
   </div>
 </template>
