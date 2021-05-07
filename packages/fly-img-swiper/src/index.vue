@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 16:54:21
+ * @LastEditTime: 2021-05-07 18:19:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -111,6 +111,9 @@ export default {
             { value: 1, duration: 100, delay: this.speed, easing: 'easeOutExpo' },
             { value: 0, duration: 100 }
           ],
+          update: function(anim) {
+            console.log(anim.progress)
+          },
           loopComplete: function(anim) {
             anim.completed && anim.restart()
           }
@@ -127,6 +130,7 @@ export default {
         const el = this.imgs[i]
         el.style.top = this.getTop(height, i, this.row) + 'px'
         el.style.left = this.getLeft(width, i, this.column) + 'px'
+        i % 2 === 0 && (el.style.transform = `translateZ(${this.baseZ / 2}px)`)
       }
     },
     getTop(size, i, num) {
