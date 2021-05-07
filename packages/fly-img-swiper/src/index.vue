@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
- * @Date: 2021-05-06 11:13:11
- * @LastEditTime: 2021-05-07 11:33:10
+ * @Date: 2021-05-07 12:03:17
+ * @LastEditTime: 2021-05-07 12:04:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /vue-beautiful-template-master/packages/3d-img-swiper/src/index.vue
+ * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
 -->
 <template>
   <div class="img-swiper">
@@ -24,7 +24,7 @@
 import anime from 'animejs/lib/anime.es.js'
 
 export default {
-  components: {},
+  name: 'FlyImgSwiper',
   props: {
     imgList: {
       type: Array,
