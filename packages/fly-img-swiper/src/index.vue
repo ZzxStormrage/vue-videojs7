@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 12:04:49
+ * @LastEditTime: 2021-05-07 12:12:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -9,14 +9,11 @@
 <template>
   <div class="img-swiper">
     <div ref="imgsContent" class="imgs-content">
-      <div v-for="img in imgList" ref="imgs" :key="img.id" class="img-wrap">
+      <div v-for="(img,index) in imgList" ref="imgs" :key="index" class="img-wrap" @click="handelClick(img, index)">
         <img class="img" :src="img.src">
         <slot />
       </div>
     </div>
-
-    <button class="stop" @click="stop()">stop</button>
-    <button class="start" @click="start()">start</button>
   </div>
 </template>
 
@@ -94,6 +91,9 @@ export default {
     start() {
       this.stop()
       this.move()
+    },
+    handelClick(item, index) {
+      this.$emit('handelClick', item)
     },
     move() {
       for (let i = 0, len = this.imgs.length; i < len; i++) {
