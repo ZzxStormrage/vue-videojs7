@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 18:38:16
+ * @LastEditTime: 2021-05-07 18:47:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -77,7 +77,7 @@ export default {
   methods: {
     setImgsSwiper() {
       this.setImgPosition()
-      // this.move()
+      this.move()
     },
     clearTimeout() {
       for (var each in this.pageTimer) {
