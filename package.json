@@ -1,9 +1,11 @@
 {
   "name": "fly-img-swiper",
   "version": "0.1.0",
+  "author": "zzx",
   "private": false,
   "main": "liib/hades-ui.umd.min.js",
   "descriptiion": "this is a fly-img-swiper",
+  "keyword": "fly-img-swiper swiper img",
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
