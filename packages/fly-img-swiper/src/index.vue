@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 16:11:07
+ * @LastEditTime: 2021-05-08 19:36:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -11,7 +11,7 @@
     <div ref="imgsContent" class="imgs-content">
       <div v-for="(img,index) in imgList" ref="imgs" :key="index" class="img-wrap" @click="handelClick(img, index)">
         <img class="img" :src="img.src">
-        <slot />
+        <slot :item="img" :index="index" />
       </div>
     </div>
   </div>
