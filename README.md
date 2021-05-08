@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-08 16:08:14
+ * @LastEditTime: 2021-05-08 16:11:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -22,7 +22,6 @@ Vue.component('FlyImgSwiper', FlyImgSwiper)
 imgList = [
   {
     src: require(`./img/${i + 1}.jpg`),
-    id: 'img' + i
   }
 ]
 
@@ -36,7 +35,7 @@ imgList = [
 ### Atributos
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| imgList | 基础图片数据 | Object | {src:"",id:1} 必填项 | - |
+| imgList | 基础图片数据 | Object | {src:""} 必填项 | - |
 | perspective | 视距 | Number | - | 1000 |
 | randomNum | 随机位置参数 | Number | - | 40 |
 | row | 行 | Number | - | 5 |
