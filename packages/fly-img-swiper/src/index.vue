@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 19:47:14
+ * @LastEditTime: 2021-05-08 20:12:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -58,6 +58,10 @@ export default {
     speed: {
       type: Number,
       default: 5000
+    },
+    transforms: {
+      type: String,
+      default: 'translateZ'
     }
   },
   data() {
@@ -105,7 +109,7 @@ export default {
         const delay = Math.floor(Math.random() * this.speed)
         const animations = anime({
           targets: el,
-          translateZ: this.overZ,
+          [this.transforms]: this.overZ,
           delay: delay,
           loop: false,
           duration: this.speed,

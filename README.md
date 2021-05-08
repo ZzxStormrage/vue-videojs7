@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-08 16:43:28
+ * @LastEditTime: 2021-05-08 20:11:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -43,4 +43,5 @@ imgList = [
 | baseZ | 初始视距 Z轴 | Number | - | -400 |
 | overZ | 消失视距 Z轴 | Number | - | 600 |
 | speed | 速度 | Number | - | 10000 |
+| transforms | 动画方式 | String | - | translateZ |
 
