@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2021-05-08 16:42:08
+ * @LastEditTime: 2021-05-08 19:47:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
@@ -9,7 +9,13 @@
 <template>
   <div id="app">
     <div class="img-swiper-wrap">
-      <fly-img-swiper ref="flyImgSwiper" :img-list="imgList" />
+      <fly-img-swiper ref="flyImgSwiper" :img-list="imgList">
+        <!-- <template v-slot:item="slotProps">
+          <div class="item">
+            {{ slotProps }}
+          </div>
+        </template> -->
+      </fly-img-swiper>
       <div>
         <button @click="setFlyImgStatus('pause')">暂停</button>
         <button @click="setFlyImgStatus('play')">开始</button>

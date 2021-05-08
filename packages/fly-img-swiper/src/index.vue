@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 19:39:37
+ * @LastEditTime: 2021-05-08 19:47:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -11,7 +11,7 @@
     <div ref="imgsContent" class="imgs-content">
       <div v-for="(img,index) in imgList" ref="imgs" :key="index" class="img-wrap" @click="handelClick(img, index)">
         <img class="img" :src="img.src">
-        <slot :item="img" :index="index" />
+        <slot name="item" :item="img" :index="index" />
       </div>
     </div>
   </div>
@@ -187,14 +187,13 @@ export default {
     transform-origin: center;
     transition: opacity .5s linear;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
-    border-radius: 4px;
-    overflow: hidden;
 
     .img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 1;
+      border-radius: 3px;
     }
   }
 }
