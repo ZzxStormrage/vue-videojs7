@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-07 17:06:22
+ * @LastEditTime: 2021-05-08 12:23:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -28,6 +28,12 @@ imgList = [
     id: 'img' + i
   }
 ]
+
+// 内置方法
+// type 可选 'pause', 'play', 'restart', 'reverse'
+
+  this.$refs.flyImgSwiper.setStatus(type)
+
 ```
 
 ### Atributos

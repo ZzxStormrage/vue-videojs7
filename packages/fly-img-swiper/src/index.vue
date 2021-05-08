@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 12:19:23
+ * @LastEditTime: 2021-05-08 12:21:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -87,7 +87,11 @@ export default {
       }
     },
     setStatus(type) {
-      // 'pause' 'play''restart' 'reverse'
+      const statusArr = ['pause', 'play', 'restart', 'reverse']
+      if (!statusArr.includes(type)) {
+        console.error('请传入正确的值', statusArr)
+        return
+      }
       this.animations.forEach(item => {
         item[type]()
       })
