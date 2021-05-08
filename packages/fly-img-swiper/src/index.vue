@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 12:21:37
+ * @LastEditTime: 2021-05-08 16:04:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.es.js'
+import anime from './anime.es.js'
 
 export default {
   name: 'FlyImgSwiper',
