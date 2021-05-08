@@ -1,6 +1,6 @@
 {
   "name": "fly-img-swiper",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "keyword": "alert",
   "author": "zzx",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "fly-img-swiper": "^0.1.4",
+    "fly-img-swiper": "^0.1.7",
     "vue": "^2.6.11"
   },
   "devDependencies": {

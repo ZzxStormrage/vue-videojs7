@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-08 15:51:41
+ * @LastEditTime: 2021-05-08 16:08:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /fly-img-swiper/README.md
@@ -11,12 +11,9 @@
 # Use 
 
 ```
-npm i fly-img-swiper --S
-npm i animejs --D
-
+cnpm i fly-img-swiper --S
 
 import FlyImgSwiper from 'fly-img-swiper'
-
 Vue.component('FlyImgSwiper', FlyImgSwiper)
 
 
