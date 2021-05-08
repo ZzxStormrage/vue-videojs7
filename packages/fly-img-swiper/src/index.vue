@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-07 18:47:34
+ * @LastEditTime: 2021-05-08 12:19:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -39,17 +39,21 @@ export default {
       type: Number,
       default: 5
     },
+    autoPlay: {
+      type: Boolean,
+      default: true
+    },
     column: {
       type: Number,
       default: 5
     },
     baseZ: {
       type: Number,
-      default: -400
+      default: -300
     },
     overZ: {
       type: Number,
-      default: 600
+      default: 700
     },
     speed: {
       type: Number,
@@ -58,7 +62,7 @@ export default {
   },
   data() {
     return {
-      pageTimer: {}
+      animations: []
     }
   },
   computed: {
@@ -77,19 +81,16 @@ export default {
   methods: {
     setImgsSwiper() {
       this.setImgPosition()
-      this.move()
-    },
-    clearTimeout() {
-      for (var each in this.pageTimer) {
-        clearInterval(this.pageTimer[each])
+
+      if (this.autoPlay) {
+        this.move()
       }
     },
-    stop() {
-      this.clearTimeout()
-    },
-    start() {
-      this.stop()
-      this.move()
+    setStatus(type) {
+      // 'pause' 'play''restart' 'reverse'
+      this.animations.forEach(item => {
+        item[type]()
+      })
     },
     handelClick(item, index) {
       this.$emit('handelClick', item)
@@ -98,8 +99,7 @@ export default {
       for (let i = 0, len = this.imgs.length; i < len; i++) {
         const el = this.imgs[i]
         const delay = Math.floor(Math.random() * this.speed)
-
-        anime({
+        const animations = anime({
           targets: el,
           translateZ: this.overZ,
           delay: delay,
@@ -108,13 +108,14 @@ export default {
           direction: 'alternate',
           easing: 'easeInOutSine',
           opacity: [
-            { value: 1, duration: 200, delay: this.speed, easing: 'easeInOutExpo' },
+            { value: 1, duration: 200, delay: (this.speed + delay) * 0.85, easing: 'easeInOutExpo' },
             { value: 0, duration: 0 }
           ],
           loopComplete: function(anim) {
             anim.completed && anim.restart()
           }
         })
+        this.animations.push(animations)
       }
     },
 
@@ -127,7 +128,7 @@ export default {
         const el = this.imgs[i]
         el.style.top = this.getTop(height, i, this.row) + 'px'
         el.style.left = this.getLeft(width, i, this.column) + 'px'
-        i % 2 === 0 && (el.style.transform = `translateZ(${this.baseZ / 2}px)`)
+        i % 2 === 0 && (el.style.transform = `translateZ(${this.baseZ / 4}px)`)
       }
     },
     getTop(size, i, num) {
@@ -181,15 +182,9 @@ export default {
     position: absolute;
     transform-origin: center;
     transition: opacity .5s linear;
-
-    @keyframes imgOpacity {
-      from {opacity: 1;}
-      to {opacity: 0}
-    }
-    &.img_opacity {
-      animation-name: imgOpacity;
-      animation-duration: 1s;
-    }
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+    border-radius: 4px;
+    overflow: hidden;
 
     .img {
       width: 100%;

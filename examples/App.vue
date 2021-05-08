@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2021-05-07 16:49:58
+ * @LastEditTime: 2021-05-08 12:18:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
@@ -10,10 +10,12 @@
   <div id="app">
     <div class="img-swiper-wrap">
       <fly-img-swiper ref="flyImgSwiper" :img-list="imgList" />
-    </div>
-    <div>
-      <button @click="start">start</button>
-      <button @click="stop">stop</button>
+      <div>
+        <button @click="setFlyImgStatus('pause')">暂停</button>
+        <button @click="setFlyImgStatus('play')">开始</button>
+        <button @click="setFlyImgStatus('restart')">重置</button>
+        <button @click="setFlyImgStatus('reverse')">倒转</button>
+      </div>
     </div>
   </div>
 </template>
@@ -36,11 +38,8 @@ export default {
     }
   },
   methods: {
-    start() {
-      this.$refs.flyImgSwiper.start
-    },
-    stop() {
-      this.$refs.flyImgSwiper.stop()
+    setFlyImgStatus(type) {
+      this.$refs.flyImgSwiper.setStatus(type)
     }
   }
 }
