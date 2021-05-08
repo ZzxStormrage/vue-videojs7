@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2021-05-08 16:06:59
+ * @LastEditTime: 2021-05-08 16:42:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
@@ -28,7 +28,7 @@ export default {
     }
   },
   created() {
-    for (let i = 0; i < 17; i++) {
+    for (let i = 0; i < 7; i++) {
       this.imgList.push(
         {
           src: require(`./img/${i + 1}.jpg`),
