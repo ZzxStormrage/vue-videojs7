@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 12:03:17
- * @LastEditTime: 2021-05-08 20:12:05
+ * @LastEditTime: 2021-05-10 10:36:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/packages/fly-img-swiper/src/index.vue
@@ -61,7 +61,7 @@ export default {
     },
     transforms: {
       type: String,
-      default: 'translateZ'
+      default: 'translateX'
     }
   },
   data() {
@@ -115,10 +115,10 @@ export default {
           duration: this.speed,
           direction: 'alternate',
           easing: 'easeInOutSine',
-          opacity: [
-            { value: 1, duration: 200, delay: (this.speed + delay) * 0.85, easing: 'easeInOutExpo' },
-            { value: 0, duration: 0 }
-          ],
+          // opacity: [
+          //   { value: 1, duration: 200, delay: (this.speed + delay) * 0.85, easing: 'easeInOutExpo' },
+          //   { value: 0, duration: 0 }
+          // ],
           loopComplete: function(anim) {
             anim.completed && anim.restart()
           }
@@ -136,7 +136,7 @@ export default {
         const el = this.imgs[i]
         el.style.top = this.getTop(height, i, this.row) + 'px'
         el.style.left = this.getLeft(width, i, this.column) + 'px'
-        i % 2 === 0 && (el.style.transform = `translateZ(${this.baseZ / 4}px)`)
+        i % 2 === 0 && (el.style.transform = `translateZ(${this.baseZ / 0.7}px)`)
       }
     },
     getTop(size, i, num) {
@@ -190,6 +190,7 @@ export default {
     position: absolute;
     transform-origin: center;
     transition: opacity .5s linear;
+    background: #ccc;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
 
     .img {
