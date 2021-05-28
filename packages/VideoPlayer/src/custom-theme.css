@@ -1,0 +1,14 @@
+.video-js .vjs-tech {position: relative !important;}
+.video-js .vjs-time-control{display:block;}
+.video-js .vjs-remaining-time{display: none;}
+.video-js .video-custom-error { color: #F56C6C; font-weight: 600; font-size: 16px;}
+.video-js .vjs-big-play-button {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  line-height: 2.3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
