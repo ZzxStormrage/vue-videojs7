@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2021-04-22 20:44:12
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-05 11:07:40
+ * @LastEditors: zhengzhangxu 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
 -->
@@ -141,7 +141,7 @@ export default {
       deep: true,
       handler(options, oldOptions) {
         this.dispose(() => {
-          if (options && options.sources && options.sources.length) {
+          if (options && options.src) {
             this.initialize()
           }
         })
@@ -165,6 +165,13 @@ export default {
     initialize() {
       // videojs options
       const videoOptions = Object.assign({}, this.globalOptions, this.options)
+
+      videoOptions.sources = [
+        {
+          src: this.options.src,
+          type: 'video/mp4'
+        }
+      ]
 
       // ios fullscreen
       if (this.playsinline) {
