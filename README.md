@@ -1,47 +1,21 @@
 <!--
- * @Author: your name
- * @Date: 2021-05-07 16:29:33
- * @LastEditTime: 2021-05-08 20:11:50
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /fly-img-swiper/README.md
+ * @Author: zhengzhangxu 452436275@qq.com
+ * @Date: 2021-05-08 15:51:34
+ * @LastEditors: zhengzhangxu 452436275@qq.com
+ * @LastEditTime: 2022-08-10 16:48:50
+ * @FilePath: /vue-video-play-7/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-# 飞翔的图片
 
-# Use 
-```
-cnpm i fly-img-swiper --S
-
-import FlyImgSwiper from 'fly-img-swiper'
-Vue.component('FlyImgSwiper', FlyImgSwiper)
-
-
-<fly-img-swiper ref="flyImgSwiper" :img-list="imgList" @handelClick="handelClick"/>
-
-imgList = [
-  {
-    src: require(`./img/${i + 1}.jpg`),
-  }
-]
-
-// 内置方法
-// type 可选 'pause', 'play', 'restart', 'reverse'
-
-  this.$refs.flyImgSwiper.setStatus(type)
-
-```
-
-
-### Atributos
+### playerOptions 其他参数
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| imgList | 基础图片数据 | Object | {src:""} 必填项 | - |
-| perspective | 视距 | Number | - | 1000 |
-| randomNum | 随机位置参数 | Number | - | 40 |
-| row | 行 | Number | - | 5 |
-| column | 列 | Number | - | 5 |
-| baseZ | 初始视距 Z轴 | Number | - | -400 |
-| overZ | 消失视距 Z轴 | Number | - | 600 |
-| speed | 速度 | Number | - | 10000 |
-| transforms | 动画方式 | String | - | translateZ |
-
+| videoOffset | 视频裁剪 | Objeect | { startMs: 0, endMs: 0} | — |
+| pictureInPictureToggle | 画中画 | boolean | — | — |
+| currentTimeDisplay | 当前时间 | boolean | - | - |
+| timeDivider | 时间分割线 | boolean | — | — |
+| durationDisplay | 总时间 | boolean | — | true |
+| progressControl | 进度条 | boolean | — | true |
+| customControlSpacer-text | 未知 | boolean | — | — |
+| fullscreenToggle | 全屏 | boolean | — | false |
+| remainingTimeDisplay | 剩余秒数 | boolean | - | light |

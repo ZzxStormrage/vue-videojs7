@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-10 16:08:55
+ * @LastEditTime: 2022-08-10 16:47:56
  * @LastEditors: zhengzhangxu 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
@@ -80,10 +80,6 @@ export default {
           endMs: 10
         }
       }
-    },
-    start: {
-      type: Number,
-      default: 0
     },
     crossOrigin: {
       type: String,
