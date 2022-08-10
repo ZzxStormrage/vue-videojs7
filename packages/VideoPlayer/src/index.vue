@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-05 11:07:40
+ * @LastEditTime: 2022-08-10 16:08:55
  * @LastEditors: zhengzhangxu 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
@@ -28,6 +28,8 @@ import _videojs from 'video.js'
 const videojs = window.videojs || _videojs
 import 'video.js/dist/video-js.css'
 import './custom-theme.css'
+import 'videojs-offset'
+
 // pollfill
 if (typeof Object.assign !== 'function') {
   Object.defineProperty(Object, 'assign', {
@@ -70,6 +72,15 @@ const DEFAULT_EVENTS = [
 export default {
   name: 'VideoPlayer',
   props: {
+    videoOffset: {
+      type: Object,
+      default: () => {
+        return {
+          startMs: 3.9,
+          endMs: 10
+        }
+      }
+    },
     start: {
       type: Number,
       default: 0
@@ -169,9 +180,11 @@ export default {
       videoOptions.sources = [
         {
           src: this.options.src,
-          type: 'video/mp4'
+          type: this.options.type || 'video/mp4'
         }
       ]
+
+      console.log('🚀 ~ file: index.vue ~ line 179 ~ initialize ~ videoOptions', videoOptions)
 
       // ios fullscreen
       if (this.playsinline) {
@@ -233,6 +246,14 @@ export default {
         // player readied
         self.$emit('ready', this)
       })
+
+      if (this.videoOffset.end > 0) {
+        this.player.offset({
+          start: this.videoOffset.startMs / 1000,
+          end: this.videoOffset.endMs / 1000,
+          restart_beginning: false // Should the video go to the beginning when it ends
+        })
+      }
     },
     dispose(callback) {
       if (this.player && this.player.dispose) {
