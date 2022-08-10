@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-02-23 16:40:51
- * @LastEditTime: 2021-05-28 18:49:40
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-10 18:14:27
+ * @LastEditors: zhengzhangxu 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/index.js
  */

@@ -1,8 +1,8 @@
 {
-  "name": "fly-img-swiper",
-  "version": "0.2.0",
+  "name": "vue-videojs7",
+  "version": "1.0.0",
   "private": false,
-  "keyword": "alert",
+  "keyword": "vue videojs video",
   "author": "zzx",
   "license": "MIT",
   "main": "lib/fly-img-swiper.umd.min.js",
@@ -10,7 +10,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name fly-img-swiper --dest lib packages/fly-img-swiper/index.js"
+    "lib": "vue-cli-service build --target lib --name vue-videojs7 --dest lib packages/VideoPlayer/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
