@@ -1,6 +1,6 @@
 {
   "name": "vue-video-paly-7",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "基于videojs7.20.1 的视频播放插件 可播放视频流MP4 可裁剪当前视频",
   "keyword": "vue videojs video",
