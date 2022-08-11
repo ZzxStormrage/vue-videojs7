@@ -2,7 +2,7 @@
  * @Author: zhengzhangxu 452436275@qq.com
  * @Date: 2021-05-08 15:51:34
  * @LastEditors: zzx 452436275@qq.com
- * @LastEditTime: 2022-08-11 15:09:03
+ * @LastEditTime: 2022-08-11 15:11:15
  * @FilePath: /vue-video-play-7/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -40,8 +40,7 @@ npm i vue-video-paly-7 -S
         // type: 'application/x-mpegURL',
         type: 'video/mp4',
         // mp4
-        src: 'https://cdn-play.tmsx.net/access/ffGpu9MDdzMvNs3tMG-mywNbwO6MuHXnUjpx1JAv7Mnkde8vcGDQOroY9_1jaKnRhkaHO3Vtj8T6Vtql-3MxD1B3nH58bVdCFDeg05UWdZxAk37USnTBl-TNltEumnwN.eyJleHAiOjE2NjAxMjIwMDAsImlzcyI6Im1pY3JvX2N1dCJ9.30d624344b041e2ec80c9eddc470df51'
-        // src: 'http://tdetect.tm.video/approve/live?channel=CCTV13HD&type=standard'
+        src: ''
         // webm
         // src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
       },
