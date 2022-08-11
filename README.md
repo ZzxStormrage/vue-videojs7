@@ -2,16 +2,15 @@
  * @Author: zhengzhangxu 452436275@qq.com
  * @Date: 2021-05-08 15:51:34
  * @LastEditors: zzx 452436275@qq.com
- * @LastEditTime: 2022-08-11 11:05:27
+ * @LastEditTime: 2022-08-11 11:10:34
  * @FilePath: /vue-video-play-7/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 
-### 安装
-`
-npm i vue-video-paly-7 --S
-
-`
+## Install 安装
+```shell
+cnpm install vue-3d-card -S
+```
 
 ### playerOptions 其他参数
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
