@@ -13,6 +13,10 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name vue-video-paly-7 --dest lib packages/VideoPlayer/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ZzxStormrage/vue-videojs7.git"
+  },
   "dependencies": {
     "core-js": "^3.6.5",
     "fly-img-swiper": "^0.1.9",
