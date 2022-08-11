@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-10 16:47:56
- * @LastEditors: zhengzhangxu 452436275@qq.com
+ * @LastEditTime: 2022-08-11 16:21:02
+ * @LastEditors: zzx 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
 -->
@@ -179,8 +179,6 @@ export default {
           type: this.options.type || 'video/mp4'
         }
       ]
-
-      console.log('🚀 ~ file: index.vue ~ line 179 ~ initialize ~ videoOptions', videoOptions)
 
       // ios fullscreen
       if (this.playsinline) {
