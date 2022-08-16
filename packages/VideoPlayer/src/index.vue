@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-11 16:21:02
+ * @LastEditTime: 2022-08-16 18:13:38
  * @LastEditors: zzx 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
@@ -24,9 +24,9 @@
 
 <script>
 // lib
-import _videojs from 'video.js'
+import _videojs from './video.min.js'
 const videojs = window.videojs || _videojs
-import 'video.js/dist/video-js.css'
+import './videojs.css'
 import './custom-theme.css'
 import 'videojs-offset'
 

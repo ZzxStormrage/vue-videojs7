@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 11:18:36
- * @LastEditTime: 2022-08-10 16:41:00
- * @LastEditors: zhengzhangxu 452436275@qq.com
+ * @LastEditTime: 2022-08-11 17:16:43
+ * @LastEditors: zzx 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-beautiful-template-master/example/App.vue
 -->
@@ -22,9 +22,9 @@ export default {
         autoplay: true,
         fluid: true,
         // type: 'application/x-mpegURL',
-        type: 'video/mp4',
+        type: 'application/x-mpegurl',
         // mp4
-        src: 'https://cdn-play.tmsx.net/access/ffGpu9MDdzMvNs3tMG-mywNbwO6MuHXnUjpx1JAv7Mnkde8vcGDQOroY9_1jaKnRhkaHO3Vtj8T6Vtql-3MxD1B3nH58bVdCFDeg05UWdZxAk37USnTBl-TNltEumnwN.eyJleHAiOjE2NjAxMjIwMDAsImlzcyI6Im1pY3JvX2N1dCJ9.30d624344b041e2ec80c9eddc470df51'
+        src: 'https://api-cloud.tmsx.net/api/quick-cut/h264-m3u8-data?type=live&channel=GuangXiTV-HZ'
         // src: 'http://tdetect.tm.video/approve/live?channel=CCTV13HD&type=standard'
         // webm
         // src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
