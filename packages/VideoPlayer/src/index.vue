@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-17 11:14:04
+ * @LastEditTime: 2022-08-17 17:09:00
  * @LastEditors: zzx 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
@@ -57,6 +57,7 @@ if (typeof Object.assign !== 'function') {
 
 // as of videojs 6.6.0
 const DEFAULT_EVENTS = [
+  'durationchange',
   'loadeddata',
   'canplay',
   'canplaythrough',
@@ -144,6 +145,22 @@ export default {
     }
   },
   watch: {
+    videoOffset: {
+      deep: true,
+      handler(obj) {
+        this.dispose(() => {
+          if (obj && obj.end) {
+            if (!this.player) {
+              this.player.offset({
+                start: this.videoOffset.start,
+                end: this.videoOffset.end,
+                restart_beginning: false // Should the video go to the beginning when it ends
+              })
+            }
+          }
+        })
+      }
+    },
     options: {
       deep: true,
       handler(options, oldOptions) {
