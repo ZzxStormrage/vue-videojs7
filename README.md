@@ -2,7 +2,7 @@
  * @Author: zhengzhangxu 452436275@qq.com
  * @Date: 2021-05-08 15:51:34
  * @LastEditors: zzx 452436275@qq.com
- * @LastEditTime: 2022-08-11 15:11:15
+ * @LastEditTime: 2022-08-17 11:21:16
  * @FilePath: /vue-video-play-7/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -107,7 +107,7 @@ npm i vue-video-paly-7 -S
 ### playerOptions 其他参数
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| videoOffset | 视频裁剪 | Objeect | { startMs: 0, endMs: 0} | — |
+| videoOffset | 视频裁剪 传入秒 | Objeect | { start: 0, end: 0} | — |
 | pictureInPictureToggle | 画中画 | boolean | — | — |
 | currentTimeDisplay | 当前时间 | boolean | - | - |
 | timeDivider | 时间分割线 | boolean | — | — |

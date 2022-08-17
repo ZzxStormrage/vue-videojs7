@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-23 16:48:16
- * @LastEditTime: 2022-08-16 18:13:38
+ * @LastEditTime: 2022-08-17 11:14:04
  * @LastEditors: zzx 452436275@qq.com
  * @Description: In User Settings Edit
  * @FilePath: /vue-zzx-ui/packages/VideoPlayer/src/index.vue
@@ -24,11 +24,11 @@
 
 <script>
 // lib
-import _videojs from './video.min.js'
+import _videojs from './videojs/video.min.js'
 const videojs = window.videojs || _videojs
-import './videojs.css'
+import './videojs/videojs.css'
 import './custom-theme.css'
-import 'videojs-offset'
+import './videojs/videojs-offset.js'
 
 // pollfill
 if (typeof Object.assign !== 'function') {
@@ -76,8 +76,8 @@ export default {
       type: Object,
       default: () => {
         return {
-          startMs: 3.9,
-          endMs: 10
+          start: 0,
+          end: 0
         }
       }
     },
@@ -161,6 +161,14 @@ export default {
       this.player.on('error', () => {
         this.setErrorStyle()
       })
+
+      if (this.videoOffset.end > 0) {
+        this.player.offset({
+          start: this.videoOffset.start,
+          end: this.videoOffset.end,
+          restart_beginning: false // Should the video go to the beginning when it ends
+        })
+      }
     }
   },
   beforeDestroy() {
@@ -240,14 +248,6 @@ export default {
         // player readied
         self.$emit('ready', this)
       })
-
-      if (this.videoOffset.end > 0) {
-        this.player.offset({
-          start: this.videoOffset.startMs / 1000,
-          end: this.videoOffset.endMs / 1000,
-          restart_beginning: false // Should the video go to the beginning when it ends
-        })
-      }
     },
     dispose(callback) {
       if (this.player && this.player.dispose) {
